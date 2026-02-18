@@ -21,6 +21,43 @@ header{
     padding:20px 60px;
 }
 
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+    gap:40px;
+}
+
+
+
+.skills-card:hover{
+    transform:translateY(-8px);
+}
+
+
+
+.fill{
+    height:100%;
+    width:0;
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    border-radius:20px;
+    transition:1.2s ease;
+    box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+}
+
+
+.section, .card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
 .logo span{
     color:#00c6ff;
 }
@@ -166,16 +203,8 @@ footer{
     padding:20px;
     background:#0b161d;
 }
-.section, .card{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s;
-}
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
+
 
 /* ABOUT PAGE DESIGN */
 
@@ -261,9 +290,6 @@ footer{
     transition:.3s;
 }
 
-.skills-card:hover{
-    transform:translateY(-8px);
-}
 
 .skills-card h2{
     margin-bottom:25px;
@@ -287,14 +313,6 @@ footer{
     border: 1px solid rgba(0, 198, 255, 0.2);
 }
 
-.fill{
-    height:100%;
-    width:0;
-    background:linear-gradient(90deg,#00c6ff,#0072ff);
-    border-radius:20px;
-    transition:1.2s ease;
-    box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
-}
 
 
 

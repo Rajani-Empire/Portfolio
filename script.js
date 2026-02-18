@@ -1,6 +1,6 @@
-// ===============================
+
 // AUTO ACTIVE NAVIGATION
-// ===============================
+
 const currentPage = location.pathname.split("/").pop();
 document.querySelectorAll("nav a").forEach((link) => {
   if (link.getAttribute("href") === currentPage) {
@@ -8,9 +8,9 @@ document.querySelectorAll("nav a").forEach((link) => {
   }
 });
 
-// ===============================
+
 // DARK MODE WITH SAVE
-// ===============================
+
 const themeBtn = document.getElementById("themeToggle");
 
 if (localStorage.getItem("theme") === "light") {
@@ -27,9 +27,9 @@ if (themeBtn) {
   });
 }
 
-// ===============================
+
 // TYPING EFFECT (Home Page)
-// ===============================
+
 window.addEventListener("load", () => {
   const typing = document.getElementById("typing");
   if (typing) {
@@ -45,9 +45,9 @@ window.addEventListener("load", () => {
   }
 });
 
-// ===============================
+
 // SCROLL REVEAL ANIMATION
-// ===============================
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -60,9 +60,9 @@ document.querySelectorAll(".card, .section").forEach((el) => {
   observer.observe(el);
 });
 
-// ===============================
+
 // SKILL ANIMATION ON SCROLL
-// ===============================
+
 function animateSkillBars() {
   document.querySelectorAll(".fill").forEach((bar) => {
     const position = bar.getBoundingClientRect().top;
@@ -72,14 +72,14 @@ function animateSkillBars() {
   });
 }
 
-// Run on load (in case section is already visible)
+
 window.addEventListener("load", animateSkillBars);
-// Run on scroll
+
 window.addEventListener("scroll", animateSkillBars);
 
-// ===============================
-// PROJECT FILTER (Projects Page)
-// ===============================
+
+// PROJECT FILTER 
+
 const projects = [
   {
     name: "Portfolio Website",
@@ -108,9 +108,9 @@ function filterProjects(type) {
   });
 }
 
-// ===============================
+
 // MODAL SYSTEM
-// ===============================
+
 function openModal(project) {
   const modal = document.getElementById("modal");
   const body = document.getElementById("modalBody");
@@ -125,9 +125,9 @@ if (closeModal) {
     (document.getElementById("modal").style.display = "none");
 }
 
-// ===============================
+
 // REAL TIME FORM VALIDATION
-// ===============================
+
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 const errorText = document.getElementById("error");
@@ -156,9 +156,9 @@ function toggleMode() {
   document.body.classList.toggle("light");
 }
 
-// ===============================
+
 // BACK TO TOP BUTTON
-// ===============================
+
 const topBtn = document.createElement("button");
 topBtn.innerText = "↑";
 topBtn.style.position = "fixed";
